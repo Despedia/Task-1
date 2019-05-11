@@ -1,0 +1,81 @@
+1.环境搭建
+  anaconda环境配置
+  下载链接：官网： https://www.continuum.io/downloads
+           清华大学镜像：https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/
+  解释器：
+         CPython：官方解释器，C语言开发，使用最广的python解释器
+         IPython：基于CPython之上的一个交互式解释器，在交互方式上有所增强，功能与CPython完全一样
+                  CPython用>>>作为提示符，IPython用ln[序号]:作为提示符
+         PyPy：它的目标是执行速度。PyPy采用JIT技术，对Python代码进行动态编译（注意不是解释），所以可以显著提高Python代码的执行速度。
+               绝大部分Python代码都可以在PyPy下运行，但是PyPy和CPython有一些是不同的，这导致相同的Python代码在两种解释器下执行可能会有不同的结果。
+         Jython：运行在Java平台上的Python解释器，可以直接把Python代码编译成Java字节码执行。
+         IronPython：运行在微软.Net平台上的Python解释器，可以直接把Python代码编译成.Net的字节码。
+2.python初体验
+  print and input
+  用print加上字符串，可以向屏幕上输出指定的文字
+    例：print('hello,world') --- 字符串必须用英文引号括住
+  input函数用于向计算机输入信息并储存
+    例：a = input("What's your name: ")
+3.Python基础
+  python变量特性：变量可以指定不同的数据类型，可以存储 number，string, python 数据容器（列表、元组、集合、字典）
+    number：a = 1
+    string: b = 'a boy'
+    列表：c = [1,2,3]
+    元组：d = (1,2,3) --- 不可变更
+    集合：e = {1，2，3}
+    字典：f = {'a':'blue','b':'red') --- 键值对
+  python变量命名规则
+    变量名必须是大小写英文、数字和_的组合，且不能用数字开头
+  注释方法：
+    单行注释在注释语句前加#
+    多行注释在注释开头和结尾加上三引号'''(""")
+      例：'''1...
+             ...2'''
+  python中":"的作用
+    出现在函数定义、类定义、if/for/while等语句末尾，表示下面的代码应当缩进，作为语句块，从属以上语句
+    字典中分开键值对
+    定义分片、步长
+  学会dir()及help()
+    dir() 函数不带参数时，返回当前范围内的变量、方法和定义的类型列表；带参数时，返回参数的属性、方法列表
+    help() 函数用于查看函数或模块用途的详细说明，返回对象帮助信息
+  import使用
+    import作用：导入模块、第三方库
+    import module
+    from filename import module
+    import module as a
+  pep8介绍
+    pep8是python的编码规范。https://pep8.org/
+    包括代码编排、文档编排、空格的使用、注释、文档描述、命名规范
+4.python数值基本知识
+  python中数值类型，int，float，bool，e记法等
+    int：整数 1、2、3
+    float：浮点数 2.55
+    bool：布尔类型 True or False
+  算术运算符
+    + 两数相加
+    - 两数相减
+    * 两数相乘
+    / 两数相除
+    ** 取幂 例：2**3
+    // 取整除，返回商的整数部分（向下取整，非四舍五入）
+    % 取模，返回除法的余数
+  逻辑运算符
+    and	a and b	布尔“与”，如果 a 为 False，a and b 返回 False，否则返回 b 的计算值	
+    or	a or b	布尔“或”，如果 a 是非 0，返回 a 的值，否则返回 b 的计算值	
+    not	not a	  布尔“非”，如果 a 为True，返回 False。如果 a 为 False，返回 True
+  成员运算符
+    成员包括字符串，列表或元组
+    in	如果 a 在列表 b 中找到值，返回 True，否则返回 False
+    not in	如果 a 在列表 b 中找到值，返回 False，否则返回 False
+  身份运算符
+    身份运算符用于比较两个对象的存储单元，即内存 id 地址
+  运算符优先级
+    与数学运算符优先级一致
+    **	        指数（最高优先级）
+    * / % //	  乘，除，取模和取整除
+    + -	        加法 减法
+    is is not	  身份运算符
+    in not in	  成员运算符
+    not and or	逻辑运算符
+    
+    
